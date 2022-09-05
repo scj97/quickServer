@@ -20,7 +20,8 @@ mkdir ~/.config/nvim
 mv init.vim ~/.config/nvim/init.vim
 
 # docker-compose file
-mv docker-compose.yaml ~/docker-compose.yaml
+mkdir ~/lab
+mv docker-compose.yaml ~/lab/docker-compose.yaml
 
 # clean up
 cd ~
