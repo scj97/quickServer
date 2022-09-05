@@ -4,7 +4,7 @@ sudo apt update -y
 sudo apt upgrade -y
 
 rm ~/.bashrc
-mv bashrc ~/.bashrc
+mv .bashrc ~/.bashrc
 source ~/.bashrc
 
 sudo apt install git neovim -y
