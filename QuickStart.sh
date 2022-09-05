@@ -17,3 +17,6 @@ mkdir ~/.config/nvim
 mv init.vim ~/.config/nvim/init.vim
 
 sudo apt install docker.io docker-compose -y
+
+cd ~
+rm -rf quickServer
