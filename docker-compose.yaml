@@ -8,7 +8,7 @@ services:
       lab:
         ipv4_address: "192.168.5.2"
     command:
-      - sudo apt update -y
+      - sudo apt update 
       - sudo apt install nmap hydra hashcat -y
         
   couchdb:
