@@ -1,12 +1,15 @@
 #!/bin/bash
 
 sudo apt update 
+sleep 2
 sudo apt upgrade -y
 
 #.bashrc
 rm ~/.bashrc
 mv .bashrc ~/.bashrc
 source ~/.bashrc
+
+sleep 2
 
 sudo apt install git neovim docker.io docker-compose -y
 
