@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt update -y
+sudo apt update 
 sudo apt upgrade -y
 
 rm ~/.bashrc
