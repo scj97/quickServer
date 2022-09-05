@@ -6,9 +6,7 @@ services:
     networks: 
       lab:
         ipv4_address: "192.168.5.2"
-    command:
-      - sudo apt update 
-      - sudo apt install nmap hydra hashcat -y
+    
         
   alpine:
     image: alpine:latest
