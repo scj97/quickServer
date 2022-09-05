@@ -14,3 +14,5 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 mkdir ~/.config
 mkdir ~/.config/nvim
 mv init.vim ~/.config/nvim/init.vim
+
+sudo apt install docker.io docker-compose
