@@ -1,32 +1,27 @@
 version: "3"
 services:
-  kali:
-    image: kalilinux/kali-rolling:latest
-    
-    networks: 
-      lab:
-        ipv4_address: "192.168.5.2"
-    
-        
-  alpine:
-    image: alpine:latest
-    ports:
-      - 22:22
-    networks:
-      lab:
-        ipv4_address: 192.168.5.4
-  
-  couchdb:
-    image: vulhub/couchdb:1.6.0
-    ports:
-      - 5984:5984
-    networks:
-      lab:
-        ipv4_address: 192.168.5.10
+    kali:
+        image: kalilinux/kali-rolling:latest
+        container_name: kali
+        networks:
+            vpc:
+                ipv4_address: 192.168.10.2
+        tty: true
+
+    alpine:
+        image: alpine:latest
+        container_name: alpine
+        ports:
+            - 22:22
+        networks:
+            vpc:
+                ipv4_address: 192.168.10.3
+        tty: true
+
 
 networks:
-  lab:
-    ipam:
-      driver: default
-      config:
-        - subnet: "192.168.5.0/24"
+    vpc:
+        ipam:
+            driver: default
+            config:
+                - subnet: "192.168.10.0/24"
