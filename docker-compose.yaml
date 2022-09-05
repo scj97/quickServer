@@ -1,0 +1,23 @@
+version: "3"
+services:
+  kali:
+    iamge: kalilinux/kali-rolling:latest
+    volumes:
+      - ./kali:~
+    networks: 
+      lab:
+        ipv4_address: "192.168.5.2"
+  couchdb:
+    image: vulhub/couchdb:1.6.0
+    ports:
+      - 5984:5984
+    networks:
+      lab:
+        ipv4_address: 192.168.5.10
+
+networks:
+  lab:
+    ipam:
+      driver: default
+      config:
+        - subnet: "192.168.5.0/24"
