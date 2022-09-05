@@ -11,6 +11,14 @@ services:
       - sudo apt update 
       - sudo apt install nmap hydra hashcat -y
         
+  alpine:
+    image: alpine:latest
+    ports:
+      - 22:22
+    networks:
+      lab:
+        ipv4_address: 192.168.5.4
+  
   couchdb:
     image: vulhub/couchdb:1.6.0
     ports:
