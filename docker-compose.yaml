@@ -11,13 +11,20 @@ services:
     alpine:
         image: alpine:latest
         container_name: alpine
-        ports:
-            - 22:22
         networks:
             vpc:
                 ipv4_address: 192.168.10.3
         tty: true
 
+    ubuntu:
+        image: ubuntu:latest
+        container_name: ubuntu
+        ports:
+            - 20:20
+        networks:
+            vpc:
+                ipv4_address: 192.168.10.4
+        tty: true
 
 networks:
     vpc:
