@@ -2,8 +2,7 @@ version: "3"
 services:
   kali:
     image: kalilinux/kali-rolling:latest
-    volumes:
-      - ./kali:~
+    
     networks: 
       lab:
         ipv4_address: "192.168.5.2"
